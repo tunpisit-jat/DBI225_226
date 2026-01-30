@@ -1,21 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>แจ้งปัญหาการใช้งาน</title>
+    <title>Assignment Dashboard</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #F9FAFB; 
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* --- Container --- */
+        .dashboard-container {
+            width: 100%;
+            max-width: 600px; 
+        }
+
+        /* --- Header Styling --- */
+        h1 {
+            font-family: 'Playfair Display', serif; 
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #1a1a1a;
+            letter-spacing: -0.5px;
+        }
+
+        /* --- List & Link Styling --- */
+        ul {
+            list-style: none; 
+        }
+
+        li {
+            margin-bottom: 20px;
+        }
+
+        .assignment-card {
+            display: block; 
+            background: #FFFFFF;
+            padding: 30px;
+            text-decoration: none; 
+            border-radius: 12px; 
+            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); 
+            position: relative;
+            overflow: hidden;
+        }
+
+        .assignment-card:hover {
+            transform: translateY(-5px); 
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); 
+            border-color: #d4af37;
+        }
+        
+        .assignment-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: #d4af37; 
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .assignment-card:hover::before {
+            opacity: 1;
+        }
+
+        .week-label {
+            display: block;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            color: #999; 
+            margin-bottom: 8px;
+        }
+
+        .topic-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #222;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .arrow-icon {
+            font-size: 1.2rem;
+            opacity: 0.3;
+            transform: translateX(0);
+            transition: all 0.4s ease;
+        }
+        
+        .assignment-card:hover .arrow-icon {
+            opacity: 1;
+            transform: translateX(10px); 
+            color: #d4af37;
+        }
+
+    </style>
 </head>
-
 <body>
-    <h1>My Assignment Dashboard</h1>
-<ul>
-  <li><a href="./Week2/">Week 2</a></li>
-  <li><a href="./Week4/">Week 4</a></li>
-</ul>
+
+    <div class="dashboard-container">
+        <h1>Assignment Dashboard</h1>
+
+        <ul>
+            <li>
+                <a href="./Week2/" class="assignment-card">
+                    <span class="week-label">Week 02</span>
+                    <span class="topic-name">
+                        User Research & Personas
+                        <span class="arrow-icon">→</span>
+                    </span>
+                </a>
+            </li>
+
+            <li>
+                <a href="./Week4/" class="assignment-card">
+                    <span class="week-label">Week 04</span>
+                    <span class="topic-name">
+                        Business Model Canvas
+                        <span class="arrow-icon">→</span>
+                    </span>
+                </a>
+            </li>
+            
+             </ul>
+    </div>
+
 </body>
-
-
 </html>
