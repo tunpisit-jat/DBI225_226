@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #84593d;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 36px;
+    color: #ffe2b5;
+    font-weight: bold;
+}
+
+nav {
+    margin: 0 2rem;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin-left: 1.5rem;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #ffe2b5;
+}
+
+.menu a:hover {
+    color: #4c2b08;
+    border-bottom: 1px solid #4c2b08;
+}
+
+.head {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 23px;
+    color: #4c2b08;
+    background-color: #b7957f;
+    padding: 1rem 0;
+}
+
+.contant-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.menu-card {
+    color: #4c2b08;
+    width: 300px;
+    background: #f9f9f99f;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.menu-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.menu-card h3 {
+    color: #333;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.menu-card p {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.menu-btn {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #4c2b08;
+    margin-bottom: 10px;
+}
+
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .nav-wrapper {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .menu li {
+        margin-left: 0;
+    }
+
+    .head {
+        font-size: 18px;
+    }
+
+    .menu-card {
+        color: #4c2b08;
+        width: 100px;
+        background: #f9f9f99f;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .menu-card img {
+        width: 100%;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .menu-card h3 {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .menu-card p {
+        font-size: 16px;
+    }
+
+    .menu-btn {
+        padding: 5px;
+    }
+
+}
